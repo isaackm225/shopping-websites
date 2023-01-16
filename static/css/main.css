@@ -1,0 +1,130 @@
+
+/* boiler plate*/
+:root{
+    font-size: 16px;
+    --text-primary: black;
+    --text-secondary: grey;
+    --bg-primary: white;
+    --bg-secondary:whitesmoke;
+    --bg-tertiary: blanchedalmond;
+    --transition-speed: 400ms;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    color: var(--bg-primary);
+    overflow: hidden;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--text-secondary); 
+}
+
+/*navbar stuff*/
+#logo{
+    height: 75px;
+    float: left;
+}
+
+.navbar{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--bg-secondary);
+    transition: width var(--transition-speed) cubic-bezier(.46,.03,.52,.96);
+    overflow: hidden;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    box-shadow: 5px 3px 5px var(--bg-tertiary) ;
+}
+
+.navbar-nav{
+    width: 50vw;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+.tools-container{
+    float: right;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12vw;
+    gap: 1.5rem;
+}
+
+/* link animation*/
+nav a{
+    width: fit-content;
+    max-height: fit-content;
+}
+
+.nav-link:hover{
+    translate: 5px -2px;
+    transition: all ease-in-out 200ms;
+    text-shadow: -10px 1px 20px var(--text-primary);
+}
+
+
+nav ul a{
+    color: var(--text-secondary);
+}
+
+nav ul a:hover{
+    color: var(--text-primary);
+}
+
+/* menu button*/
+button{
+    border: none;
+    background-color: var(--bg-secondary);
+    font-size: 1.25rem;
+}
+
+button:hover{
+    scale: 1.1;
+    transition: all ease-in-out 300ms;
+
+}
+
+/* main content */
+
+main{
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.75)), url(../img/walking_with_bag.png);
+    background-size: cover;
+    back
+}
