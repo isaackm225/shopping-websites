@@ -54,6 +54,10 @@ body::-webkit-scrollbar-thumb{
     color: var(--text-primary);
     font-size: 1.5rem;
     box-shadow: 5px 3px 5px var(--bg-tertiary) ;
+    max-height: 75px;
+}
+.hidden{
+    display: none;
 }
 
 .navbar-nav{
@@ -86,7 +90,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 /* link animation*/
-nav a{
+
+.nav-link{
+    color: var(--text-secondary);
     width: fit-content;
     max-height: fit-content;
 }
@@ -95,15 +101,25 @@ nav a{
     translate: 5px -2px;
     transition: all ease-in-out 200ms;
     text-shadow: -10px 1px 20px var(--text-primary);
-}
-
-
-nav ul a{
-    color: var(--text-secondary);
-}
-
-nav ul a:hover{
     color: var(--text-primary);
+}
+
+
+.nav-item::after{
+    content: '';
+    height: 3px;
+    width: 0px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom:-10px;
+    transition: 500ms;
+    z-index: 100;
+}
+
+.nav-item:hover::after{
+    width: 100%;
+    z-index: 100;
 }
 
 /* menu button*/
@@ -119,12 +135,62 @@ button:hover{
 
 }
 
+#nav-break{
+    width: 85%;
+    margin: auto;
+    height: 3px;
+    position: relative;
+    top: 100px;
+    color: black;
+}
+
 /* main content */
 
 main{
-    display: flex;
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+    ;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.75)), url(../img/walking_with_bag.png);
     background-size: cover;
-    back
+    background-repeat: none;
+    background-position: center;
+}
+
+.grid-item-2{
+    grid-area: two;
+    display: flex;
+}
+
+.welcome-txt{
+    margin: auto;
+    padding: 3rem;
+}
+
+.grid-item-3{
+    grid-area: three;
+}
+.bio{
+    margin: auto;
+    padding: 3rem;
+}
+
+.grid-item-4{
+    grid-area: four;
+    border: 1px red solid;
+    margin: auto;
+    width: 100%;   
+    display: flex;
+}
+
+.contact-btn{
+    height: 3rem;
+    background-color: var(--bg-secondary);
 }

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block body %}
+
+
 <nav class="navbar">
     <img id="logo" src="{{url_for('static', filename='dummy/dummy_logo.png')}}" alt="">
     <ul class="navbar-nav">
@@ -19,13 +21,15 @@
                 Men
             </a>
         </li>
+        <!--
         <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="" class="nav-link hidden">
                 Accessories
             </a>
         </li>
+        -->
         <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="" class="nav-link ">
                 Contact Us
             </a>
         </li>
@@ -50,15 +54,20 @@
 
 
 <main>
-    <div class="parent-square">
-        <div class="child-square">
-    
-            <img src="" alt="">
-        </div>
+    <div class="grid-item-2 welcome-txt"> 
+        <h1>BIENVENUE SUR LE PORTAIL DU STYLE AFRICAIN</h1>
+    </div> 
+    <div class="bio grid-item-3">
+        <h2>
+            Alors ici vous pourriez trouver des articles de qualites Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, et culpa? Rerum suscipit, nostrum repudiandae dicta nobis aliquid repellendus totam? Sit molestias veritatis sapiente error molestiae voluptates quidem architecto perspiciatis.
+        </h2>
 
     </div>
 
-    <div>
+    <div class="buttons grid-item-4">
+        <button type="button" class="shopping-btn"> Commencer a magasiner</button>
+
+        <button type="button" class="contact-btn"> Nous contacter</button>
         
     </div>
 </main>
